@@ -8,12 +8,12 @@ This project provides a complete pipeline for analyzing structured log data (att
 ## Project Structure
 
 ```
-├── analysis.py              # Data loading, cleaning and description
-├── visualizations.py        # Visualization functions (boxplots, violin plots, etc.)
-├── data_analysis_main.py    # Main entry point to run the analysis
-├── enviroment.yml           # Coda quick set-up file
-├── processed_data/          # Output directory for generated files and plots
-└── README.md                # Project documentation (you are here)
+├── scripts/                 		# Scripts for data loading, cleaning and description
+├── data_visualization.py    		# Part 1 : presenting of the data
+├── basic_ml_models_comparison.py      # Part_2 : comparison of basic ml models
+├── enviroment.yml          		# Coda quick set-up file
+├── processed_data/          		# Output directory for generated files and plots
+└── README.md               		# Project documentation (you are here)
 ```
 
 ---
@@ -32,6 +32,8 @@ bash: python data_analysis_main.py
 
 ## What It Does
 
+### Part 1 - data_visualization
+
 1. **Loads** CSV data into a DataFrame
 2. **Filters** irrelevant columns (e.g. URLs, descriptions)
 3. **Parses** data into numeric and categorical parts
@@ -46,6 +48,14 @@ bash: python data_analysis_main.py
    - Heatmaps
    - Regression plots
 
+### Part 2 - basic_ml_model_comparison
+
+1. **Loads** CSV data into a DataFrame
+2. **Filters** irrelevant columns (e.g. URLs, descriptions)
+3. **Parses** data into numeric and categorical parts
+4. **Trains** basic models from sklearn, pytorch and own
+5. **Saves** results to CSV
+6. **Compares** results
 ---
 
 ## 🛠️ Requirements
